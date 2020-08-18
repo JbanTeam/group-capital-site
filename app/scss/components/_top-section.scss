@@ -1,0 +1,202 @@
+//top-section*****************************************************begin
+.top-section {
+  padding-top: 140px;
+  padding-bottom: 80px;
+  @include md-block() {
+    padding-top: 110px;
+    padding-bottom: 50px;
+  }
+  background-image: linear-gradient(0deg, $white 0%, $dark-blue 100%);
+  .nav {
+    position: relative;
+    max-width: 800px;
+    margin: 0px auto 85px auto;
+    @include md-block() {
+      display: none;
+    }
+    &-menu {
+      display: flex;
+      justify-content: space-between;
+      overflow: hidden;
+    }
+    &-left,
+    &-right {
+      display: flex;
+      flex: 0 1 50%;
+      overflow: hidden;
+    }
+    &-left {
+      justify-content: flex-start;
+      .nav-link:first-child {
+        border-left: 1px solid $dark-blue;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+      }
+      .nav-link:last-child {
+        padding-right: 49px;
+      }
+    }
+    &-right {
+      justify-content: flex-end;
+      .nav-link:last-child {
+        border-right: 1px solid $dark-blue;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+      .nav-link:first-child {
+        padding-left: 49px;
+      }
+    }
+    &-link {
+      flex-grow: 1;
+      padding: 12px;
+      text-align: center;
+      color: $dark-blue;
+      background-color: $white;
+      border: 1px solid $dark-blue;
+      border-left: none;
+      border-right: none;
+      &.active {
+        background-color: $dark-blue;
+        color: $white;
+      }
+    }
+    &-logo {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      top: 50%;
+      left: 50%;
+      border-radius: 50%;
+      background-color: $blue;
+      color: $white;
+      box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.5);
+      transform: translate(-50%, -50%);
+      transition: box-shadow 0.3s ease;
+      .logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        margin: 0px auto;
+        color: $white;
+        text-decoration: none;
+      }
+      &:hover {
+        box-shadow: 0 0px 13px 3px rgba(0, 0, 0, 0.5);
+      }
+      span:first-child {
+        font-family: $gotham;
+        font-weight: 900;
+        font-size: 30px;
+        line-height: 30px;
+      }
+      span:last-child {
+        font-family: $gotham;
+        font-weight: normal;
+        font-size: 16px;
+      }
+    }
+  }
+  .content {
+    &-info {
+      display: flex;
+      @include sm-block() {
+        flex-wrap: wrap;
+        text-align: center;
+      }
+      div {
+        flex: 0 1 50%;
+        @include sm-block() {
+          flex: 0 1 100%;
+        }
+      }
+      .main-desc {
+        padding: 45px 20px 40px 25px;
+        color: $dark-blue;
+        position: relative;
+        margin: 0px 0px 30px 0px;
+        &::before {
+          content: '';
+          display: block;
+          min-width: 70%;
+          height: 1px;
+          position: absolute;
+          background-color: $white;
+          top: 0;
+          left: 0;
+          @include sm-block() {
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+        &::after {
+          content: '';
+          display: block;
+          min-width: 60%;
+          height: 1px;
+          position: absolute;
+          background-color: $dark-blue;
+          bottom: 0;
+          left: 0;
+          @include sm-block() {
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+        h1 {
+          font-size: 37px;
+          font-family: $gotham;
+          font-weight: bold;
+          line-height: 48px;
+          margin: 0px 0px 20px 0px;
+          @include md-block() {
+            font-size: 25px;
+            line-height: 28px;
+          }
+          &::before {
+            content: '';
+            display: block;
+            min-width: 1px;
+            height: 50px;
+            position: absolute;
+            background-color: $white;
+            top: 0;
+            left: 0;
+            @include sm-block() {
+              display: none;
+            }
+          }
+          &::after {
+            content: '';
+            display: block;
+            min-width: 1px;
+            height: 40px;
+            position: absolute;
+            background-color: $dark-blue;
+            bottom: 0;
+            left: 60%;
+            @include sm-block() {
+              display: none;
+            }
+          }
+        }
+        p {
+          font-size: 16px;
+          line-height: 18px;
+          margin: 0px 0px 40px 0px;
+          @include md-block() {
+            margin: 0px 0px 25px 0px;
+          }
+        }
+      }
+      .img-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
+//top-section*****************************************************end

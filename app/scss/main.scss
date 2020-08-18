@@ -1,0 +1,22 @@
+@import './main/smartgrid';
+@import '_mixins/mixins';
+@import './main/reset';
+
+@import './main/vars';
+@import './main/fonts';
+@import './main/libs';
+// components*********************************************
+@import './components/main-styles';
+@import './components/header';
+@import './components/top-section';
+@import './components/directions-section';
+@import './components/about-section';
+@import './components/waranties-section';
+@import './components/certificates-section';
+@import './components/callback-section';
+@import './components/footer';
+
+@import './components/modal-callback';
+@import './components/popup';
+@import './components/burger';
+@import './components/mobile-menu';

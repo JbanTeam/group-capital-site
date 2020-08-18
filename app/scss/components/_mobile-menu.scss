@@ -1,0 +1,44 @@
+//mobile-menu*****************************************************begin
+.mobile-menu {
+  position: fixed;
+  text-align: center;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  z-index: 10;
+  background-image: linear-gradient(120deg, $dark-blue 0%, $footer-blue 100%);
+  transition: left 0.3s ease;
+  button {
+    margin: 0px 0px 30px 0px;
+  }
+  &.active {
+    background-color: rgba(52, 58, 64, 0.42);
+    left: 0;
+  }
+  &_nav {
+    padding: 60px 0px 30px;
+  }
+  &_info {
+    color: $white;
+    margin: 0px 0px 30px 0px;
+    padding: 0px 15px;
+  }
+  &_item {
+    margin: 0px 0px 15px 0px;
+  }
+  &.hidden {
+    display: none;
+  }
+  .nav-link {
+    display: block;
+    padding: 20px 20px;
+    color: $white;
+    font-size: 30px;
+    &.active {
+      background-image: linear-gradient(120deg, $footer-blue 0%, $dark-blue 100%);
+    }
+  }
+}
+//mobile-menu*****************************************************end

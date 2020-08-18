@@ -1,0 +1,7 @@
+@import '_mixins/font-face';
+
+@include font-face('acrom', '../fonts/Acrom-Regular');
+@include font-face('gotham', '../fonts/GothamPro');
+@include font-face('gotham', '../fonts/GothamPro-Medium', 500);
+@include font-face('gotham', '../fonts/GothamPro-Bold', bold);
+@include font-face('gotham', '../fonts/GothamPro-Black', 900);
